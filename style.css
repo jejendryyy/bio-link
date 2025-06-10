@@ -23,7 +23,7 @@ body {
     font-weight: 900;
     -webkit-text-stroke: 2px #1e293b;
     -webkit-text-fill-color: transparent;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     z-index: -1;
     user-select: none;
 }
@@ -175,25 +175,42 @@ ul li {
     }
 }
 
-/* Tambahkan ini di bagian media query untuk layar kecil */
 @media (max-width: 480px) {
+    body {
+        padding-top: 2rem;
+    }
+    
+    .bg-text-animation {
+        font-size: 5rem;
+        top: 2rem;
+        -webkit-text-stroke: 1px #1e293b;
+    }
+    
+    .my-photo {
+        width: 6rem;
+    }
+    
+    ul {
+        width: 95%;
+    }
+    
     .link-card {
-        flex-direction: row; /* Pertahankan tata letak horizontal */
-        justify-content: space-between; /* Geser konten ke kiri */
-        align-items: center;
-        gap: 1rem;
-        text-align: left;
+        flex-direction: flex;
+        text-align: center;
+        gap: 0.5rem;
     }
     
     .link-icon {
-        margin-right: 0.5rem; /* Beri jarak antara icon dan teks */
+        padding: 0.3rem;
+        border-radius: 8px;
     }
     
-    /* Jika Anda ingin icon sejajar dengan teks */
-    .link-content {
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
+    .icon-sosmed i {
+        font-size: 1.2rem;
+    }
+    
+    .sosmed li:not(:last-child) {
+        margin-bottom: 1rem;
     }
 }
 
