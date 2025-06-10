@@ -23,7 +23,7 @@ body {
     font-weight: 900;
     -webkit-text-stroke: 2px #1e293b;
     -webkit-text-fill-color: transparent;
-    font-family: sans-serif;
+    font-family: Times New Roman;
     z-index: -1;
     user-select: none;
 }
