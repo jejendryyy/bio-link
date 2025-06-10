@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #020617;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    gap: 1rem;
+}
+
+.bg-text-animation {
+    position: absolute;
+    top: 5rem;
+    font-size: 12rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    -webkit-text-stroke: 2px #1e293b;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: -1;
+    user-select: none;
+}
+
+.my-photo {
+    width: 10rem;
+    border-radius: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    width: 80%;
+    max-width: 40rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+.sosmed li:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.icon-sosmed i {
+    font-size: 1.5rem;
+    color: #8787A3;
+}
+
+.icon-sosmed i:hover {
+    color: white;
+}
+
+.icon-sosmed a:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.link-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e293b;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 8px 10px 0 #0f0f25;
+    border: 2px solid #1e293b;
+}
+
+.link-card:hover {
+    border: 2px solid white;
+}
+
+.link-icon {
+    background-image: linear-gradient(to top, purple, cyan);
+    padding: .5rem;
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sosmed .link-icon i {
+    color: white;
+}
+
+.sosmed {
+    margin-top: 1rem;
+}
+
+.link-action {
+    color: #8787A3;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#toast {
+    width: max-content;
+    position: fixed;
+    top: 0;
+}
+
+.toast-container {
+    background-color: white;
+    color: #0f0f25;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    animation: muncul 300ms ease-in-out;
+}
+
+.toast-gone {
+    animation: hilang 1s ease-in-out 1s;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(-4rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hilang {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.copyright {
+    display: flex;
+    margin: 1rem 0;
+    gap: .5rem;
+    flex-direction: column;
+    align-items: center;
+    color: #8787A3;
+    font-size: .75rem;
+}
+
+/* Existing styles remain the same until the media queries */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bg-text-animation {
+        font-size: 8rem;
+        top: 3rem;
+    }
+    
+    .my-photo {
+        width: 8rem;
+    }
+    
+    ul {
+        width: 90%;
+    }
+    
+    .link-card {
+        padding: 0.8rem;
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 2rem;
+    }
+    
+    .bg-text-animation {
+        font-size: 5rem;
+        top: 2rem;
+        -webkit-text-stroke: 1px #1e293b;
+    }
+    
+    .my-photo {
+        width: 6rem;
+    }
+    
+    ul {
+        width: 95%;
+    }
+    
+    .link-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .link-icon {
+        padding: 0.3rem;
+        border-radius: 8px;
+    }
+    
+    .icon-sosmed i {
+        font-size: 1.2rem;
+    }
+    
+    .sosmed li:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+/* For very small devices */
+@media (max-width: 320px) {
+    .bg-text-animation {
+        font-size: 4rem;
+    }
+    
+    .link-action {
+        padding: 5px;
+    }
+    
+    .copyright {
+        font-size: 0.65rem;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+    body {
+        padding-top: 1rem;
+        gap: 0.5rem;
+    }
+    
+    .bg-text-animation {
+        top: 1rem;
+        font-size: 6rem;
+    }
+    
+    .my-photo {
+        width: 5rem;
+    }
+    
+    .sosmed li:not(:last-child) {
+        margin-bottom: 0.8rem;
+    }
+}
